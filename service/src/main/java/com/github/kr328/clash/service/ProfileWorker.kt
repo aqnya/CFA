@@ -48,12 +48,7 @@ class ProfileWorker : BaseService() {
 
     override fun onDestroy() {
     //    stopForeground(true)
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-    stopForeground(STOP_FOREGROUND_REMOVE)
-} else {
-    @Suppress("DEPRECATION")
-    stopForeground(true)
-}
+   stopForeground(STOP_FOREGROUND_REMOVE)
 
         super.onDestroy()
     }
